@@ -132,7 +132,122 @@ const projectsData: Record<string, ProjectData> = {
       'https://images.pexels.com/photos/5380649/pexels-photo-5380649.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=800'
     ]
-  }
+  },
+  'disaster-management': {
+  title: 'Climate Disaster Management System',
+  overview:
+    'A centralized climate and disaster management platform built with React/Next.js and Python backend. It provides dashboards for users, admins, and agents to monitor climate data, predict disasters, and manage responses efficiently.',
+  features: [
+    'User Authentication: Secure login and signup system for different roles.',
+    'User Dashboard: Personalized climate data and alerts.',
+    'Admin Dashboard: Tools to manage users, monitor climate events, and oversee agents.',
+    'Disaster Prediction Agents: Analyze climate data and provide early warnings.',
+    'Data Visualization: Charts, graphs, and real-time updates for climate events.',
+    'Database Management: Stores climate and disaster data locally for quick analysis.',
+    'Responsive UI: Works smoothly across devices.'
+  ],
+  tech: [
+    'Frontend: React (Next.js), CSS Modules',
+    'Backend: Python (Flask)',
+    'Database: SQLite (acms.db)',
+    'Node.js (for Next.js app)',
+    'REST API for backend communication'
+  ],
+  githubUrl: 'https://github.com/23f1000356/Disaster-Management',
+  images: [
+    'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/714258/pexels-photo-714258.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/1305761/pexels-photo-1305761.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/954473/pexels-photo-954473.jpeg?auto=compress&cs=tinysrgb&w=800'
+  ]
+},
+'ai-job-screening': {
+  title: 'AI-Powered Job Screening Application',
+  overview:
+    'An intelligent recruitment assistant that automates resume screening, candidate shortlisting, and interview scheduling using AI matching algorithms.',
+  features: [
+    'JD Summarization: Automatically extracts key elements from job descriptions',
+    'CV-JD Matching: Uses AI to match candidate resumes with job descriptions',
+    'Candidate Shortlisting: Automatically shortlists candidates based on match scores',
+    'Interview Scheduling: Sends interview invitations to shortlisted candidates',
+    'Bulk Resume Processing: Upload and process multiple resumes at once',
+    'Dashboard Analytics: Visualize recruitment metrics with interactive charts'
+  ],
+  tech: [
+    'Backend: Flask, SQLAlchemy',
+    'Frontend: Bootstrap 5, Chart.js',
+    'ML/NLP: Scikit-learn, NLTK',
+    'Database: SQLite (default)'
+  ],
+  prerequisites: [
+    'Python 3.8+',
+    'Virtual environment (recommended)',
+    'pip install -r requirements.txt',
+    'Initialize database with: python app.py'
+  ],
+  githubUrl: 'https://github.com/23f1000356/Job_screening', // 🔄 replace with your repo link
+  images: [
+    'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/1181243/pexels-photo-1181243.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800'
+  ]
+},
+'ecommerce-website': {
+  title: 'E-Commerce Website',
+  overview:
+    'A full-stack e-commerce platform that provides product browsing, cart management, checkout, and order tracking with a modern responsive UI.',
+  features: [
+    'User Authentication: Secure signup/login with session handling',
+    'Product Management: Browse, search, and filter products',
+    'Shopping Cart: Add, update, and remove items',
+    'Order Management: Place orders and track order history',
+    'Admin Dashboard: Manage products, inventory, and users',
+    'Responsive UI: Optimized for desktop and mobile',
+    'Deployment: Live hosted on Vercel'
+  ],
+  tech: [
+    'Frontend: React (Next.js), Tailwind CSS',
+    'Backend: Node.js / Express.js',
+    'Database: MongoDB / SQLite (based on setup)',
+    'Deployment: Vercel'
+  ],
+  githubUrl: 'https://github.com/23f1000356/E-commerce',
+  demoUrl: 'https://e-commerce-nine-umber.vercel.app/',
+  images: [
+    'https://images.pexels.com/photos/5632403/pexels-photo-5632403.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5632387/pexels-photo-5632387.jpeg?auto=compress&cs=tinysrgb&w=800'
+  ]
+},
+'quiz-app': {
+  title: 'Quiz App for Students',
+  overview:
+    'An interactive quiz application for students covering GK and multiple subjects. Users can take quizzes, create their own, or generate quizzes dynamically for practice and learning.',
+  features: [
+    'Multi-Subject Quizzes: General Knowledge and subject-wise quizzes',
+    'Quiz Creation: Teachers or students can create custom quizzes',
+    'Quiz Generation: Auto-generate quizzes dynamically',
+    'Score Tracking: Instant feedback and results after quiz completion',
+    'User-Friendly UI: Clean and responsive interface for all devices',
+    'Deployed and accessible online'
+  ],
+  tech: [
+    'Frontend: React (Next.js)',
+    'Styling: Tailwind CSS',
+    'Backend: Node.js / Express (if extended)',
+    'Deployment: Vercel'
+  ],
+  githubUrl: 'https://github.com/23f1000356/Quiz-App',
+  demoUrl: 'https://task3-quiz.vercel.app/',
+  images: [
+    'https://images.pexels.com/photos/4144222/pexels-photo-4144222.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/5905712/pexels-photo-5905712.jpeg?auto=compress&cs=tinysrgb&w=800',
+    'https://images.pexels.com/photos/3184646/pexels-photo-3184646.jpeg?auto=compress&cs=tinysrgb&w=800'
+  ]
+},
+
+
+
 };
 
 const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) => {
@@ -174,15 +289,25 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) =
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-lg shadow-sm z-10">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
+          <div className="flex items-center gap-8">
+            <button
+              onClick={() => window.location.href = '/'}
+              className="text-2xl font-bold text-black hover:text-purple-600 transition-colors"
+            >
+              VR
+            </button>
+            <a href="/" className="text-black hover:text-purple-600 font-semibold transition-colors">Home</a>
+            <a href="/#skills" className="text-black hover:text-purple-600 font-semibold transition-colors">Skills</a>
+            <a href="/#experience" className="text-black hover:text-purple-600 font-semibold transition-colors">Experience</a>
+            <a href="/#education" className="text-black hover:text-purple-600 font-semibold transition-colors">Education</a>
+            <a href="/#projects" className="text-black hover:text-purple-600 font-semibold transition-colors">Projects</a>
+            <a href="/#hackathons" className="text-black hover:text-purple-600 font-semibold transition-colors">Hackathons</a>
+            <a href="/#courses" className="text-black hover:text-purple-600 font-semibold transition-colors">Courses</a>
+            <a href="/#contact" className="text-black hover:text-purple-600 font-semibold transition-colors">Contact</a>
+          </div>
           <button
             onClick={onClose}
-            className="text-2xl font-bold text-blue-600 hover:text-purple-600 transition-colors"
-          >
-            VR
-          </button>
-          <button
-            onClick={onClose}
-            className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-gray-800 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-black hover:text-gray-800 transition-colors"
           >
             <ArrowLeft size={20} /> Back to Portfolio
           </button>

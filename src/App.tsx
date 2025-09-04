@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Code, Mail, Phone, MapPin, Trophy, Award, CaseSensitive as University, GraduationCap, School, Github, Linkedin, ExternalLink, Send, Shield, Building2, Heart, Bug, TrendingUp, Brain, Bot, Camera, Lightbulb } from 'lucide-react';
+import { Menu, X, Code, Mail, Phone, MapPin, Trophy, Award, CaseSensitive as University, GraduationCap, School, Github, Linkedin, ExternalLink, Send, Shield, Building2, Heart, Bug, TrendingUp, Brain, Bot, Camera, Lightbulb, Briefcase, ShoppingCart, HelpCircle, CloudLightning } from 'lucide-react';
 import ProjectDetails from './components/ProjectDetails';
 // Removed import for Vishu.jpeg; use public folder path instead
 
@@ -107,46 +107,49 @@ const App: React.FC = () => {
     link: '#',
     onClick: () => setSelectedProject('malware-prediction'), // ✅ Added
   },
-  {
-    id: 'financial-analytics',
-    title: 'Financial Analytics Dashboard',
-    description:
-      'Comprehensive financial tracking and analysis tool with advanced visualization and predictive modeling capabilities.',
-    tech: ['React', 'D3.js', 'Python', 'APIs'],
-    icon: <TrendingUp className="w-16 h-16" />,
-    link: '#',
-    onClick: () => setSelectedProject('financial-analytics'),
-  },
-  {
-    id: 'neural-network',
-    title: 'Neural Network Visualizer',
-    description:
-      'Interactive tool for visualizing and understanding neural network architectures and training processes in real-time.',
-    tech: ['JavaScript', 'TensorFlow.js', 'Canvas API', 'Education'],
-    icon: <Brain className="w-16 h-16" />,
-    link: '#',
-    onClick: () => setSelectedProject('neural-network'),
-  },
-  {
-    id: 'ai-chatbot',
-    title: 'AI Chatbot Assistant',
-    description:
-      'Intelligent conversational AI with natural language processing capabilities and context-aware responses.',
-    tech: ['Python', 'NLP', 'Flask', 'AI/ML'],
-    icon: <Bot className="w-16 h-16" />,
-    link: '#',
-    onClick: () => setSelectedProject('ai-chatbot'),
-  },
-  {
-    id: 'computer-vision',
-    title: 'Computer Vision Platform',
-    description:
-      'Multi-purpose computer vision application for object detection, facial recognition, and image analysis tasks.',
-    tech: ['OpenCV', 'Python', 'Deep Learning', 'Computer Vision'],
-    icon: <Camera className="w-16 h-16" />,
-    link: '#',
-    onClick: () => setSelectedProject('computer-vision'),
-  },
+ {
+  id: 'disaster-management',
+  title: 'Disaster Management System',
+  description:
+    'Centralized climate and disaster management platform with dashboards for users, admins, and agents to monitor data, predict disasters, and manage responses efficiently.',
+  tech: ['React (Next.js)', 'Python (Flask)', 'SQLite', 'REST API'],
+  icon: <CloudLightning className="w-16 h-16" />, 
+  link: 'https://github.com/23f1000356/Disaster-Management',
+  onClick: () => setSelectedProject('disaster-management'),
+},
+
+ {
+  id: 'ai-job-screening',
+  title: 'AI-Powered Job Screening',
+  description:
+    'Automated recruitment assistant for resume screening, JD matching, candidate shortlisting, and interview scheduling.',
+  tech: ['Flask', 'Bootstrap 5', 'Scikit-learn', 'SQLite'],
+  icon: <Briefcase className="w-16 h-16" />,  // you can also use UserCheck, FileSearch, or ClipboardList
+  link: 'https://github.com/23f1000356/Job_screening', // 🔄 replace with your repo link
+  onClick: () => setSelectedProject('ai-job-screening'),
+},
+
+{
+  id: 'ecommerce-website',
+  title: 'E-Commerce Website',
+  description:
+    'A modern full-stack e-commerce platform with authentication, cart, checkout, and admin dashboard features.',
+  tech: ['Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB'],
+  icon: <ShoppingCart className="w-16 h-16" />,
+  link: 'https://e-commerce-nine-umber.vercel.app/',
+  onClick: () => setSelectedProject('ecommerce-website'),
+},
+
+ {
+  id: 'quiz-app',
+  title: 'Quiz App',
+  description:
+    'An interactive student quiz platform with GK and subject quizzes, plus features to create and auto-generate quizzes.',
+  tech: ['Next.js', 'Tailwind CSS', 'Node.js'],
+  icon: <HelpCircle className="w-16 h-16" />,  // you can also use BookOpen or ClipboardList
+  link: 'https://task3-quiz.vercel.app/',
+  onClick: () => setSelectedProject('quiz-app'),
+},
 ];
 
 
@@ -494,16 +497,28 @@ const App: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4 mt-12">
-            <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all">
-              Show Web Dev Projects
-            </button>
-            <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all">
-              Show Data Science Projects
-            </button>
-            <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all">
-              Show ML Projects
-            </button>
-          </div>
+  <button
+    onClick={() => setSelectedProject("smart-city")}
+    className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
+  >
+    Show Web Dev Projects
+  </button>
+
+  <button
+    onClick={() => setSelectedProject("ai-job-screening")}
+    className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
+  >
+    Show Data Science Projects
+  </button>
+
+  <button
+    onClick={() => setSelectedProject("disease-prediction")}
+    className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
+  >
+    Show ML Projects
+  </button>
+</div>
+
         </div>
       </section>
 
