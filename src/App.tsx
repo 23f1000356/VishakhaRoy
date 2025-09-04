@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Code, Mail, Phone, MapPin, Trophy, Award, CaseSensitive as University, GraduationCap, School, Github, Linkedin, ExternalLink, Send, Shield, Building2, Heart, Bug, TrendingUp, Brain, Bot, Camera, Lightbulb } from 'lucide-react';
 import ProjectDetails from './components/ProjectDetails';
+// Removed import for Vishu.jpeg; use public folder path instead
 
 interface SkillData {
   name: string;
@@ -318,92 +319,89 @@ const App: React.FC = () => {
         <div className="relative z-10 max-w-6xl mx-auto px-4 w-full">
           {/* Desktop Layout */}
           <div className="hidden lg:flex items-center justify-between">
-            <div className="flex-1 text-white pr-8">
-              <h1 className="text-6xl font-bold mb-4 animate-slide-up">Vishakha Roy</h1>
-              <p className="text-xl mb-4 opacity-90">Full Stack Developer | ML Enthusiast | Data Science Practitioner</p>
-              <p className="text-lg mb-8 opacity-90 leading-relaxed">
-                Dedicated and enthusiastic Web Developer skilled in HTML, CSS, JavaScript, and React, seeking to contribute to innovative and user-friendly web projects. Driven to apply front-end development skills in a collaborative environment while continuously learning and evolving with modern web technologies. 
-                Aspiring Data Scientist with a strong foundation in Python, machine learning, and SQL, eager to apply data-driven techniques to solve real-world problems. Passionate about uncovering insights through data analysis and building predictive models that support strategic decision-making.
-              </p>
-              <div className="flex flex-wrap gap-4 mb-8">
-                <button 
-                  onClick={() => scrollToSection('projects')}
-                  className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
-                >
-                  <Code size={20} /> View My Work
-                </button>
-                <button 
-                  onClick={() => scrollToSection('contact')}
-                  className="flex items-center gap-2 px-8 py-3 border-2 border-white text-white rounded-full font-bold hover:scale-105 transform transition-all"
-                >
-                  <Mail size={20} /> Get In Touch
-                </button>
-              </div>
-              <div className="flex gap-6">
-                <a href="https://www.linkedin.com/in/vishakha-roy-52924b1b6/" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
-                  <Linkedin size={32} />
-                </a>
-                <a href="https://github.com/23f1000356" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
-                  <Github size={32} />
-                </a>
-              </div>
-            </div>
-            <div className="flex-1 flex justify-end">
-              <img 
-                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                alt="Vishakha Roy" 
-                className="max-w-sm rounded-3xl shadow-2xl"
-              />
-            </div>
+        <div className="flex-1 text-white pr-8">
+          <h1 className="text-6xl font-bold mb-4 animate-slide-up">Vishakha Roy</h1>
+          <p className="text-xl mb-4 opacity-90">Full Stack Developer | ML Enthusiast | Data Science Practitioner</p>
+          <p className="text-lg mb-8 opacity-90 leading-relaxed">
+            Dedicated and enthusiastic Web Developer skilled in HTML, CSS, JavaScript, and React, seeking to contribute to innovative and user-friendly web projects. Driven to apply front-end development skills in a collaborative environment while continuously learning and evolving with modern web technologies. 
+            Aspiring Data Scientist with a strong foundation in Python, machine learning, and SQL, eager to apply data-driven techniques to solve real-world problems. Passionate about uncovering insights through data analysis and building predictive models that support strategic decision-making.
+          </p>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <button 
+          onClick={() => scrollToSection('projects')}
+          className="flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
+            >
+          <Code size={20} /> View My Work
+            </button>
+            <button 
+          onClick={() => scrollToSection('contact')}
+          className="flex items-center gap-2 px-8 py-3 border-2 border-white text-white rounded-full font-bold hover:scale-105 transform transition-all"
+            >
+          <Mail size={20} /> Get In Touch
+            </button>
+          </div>
+          <div className="flex gap-6">
+            <a href="https://www.linkedin.com/in/vishakha-roy-52924b1b6/" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
+          <Linkedin size={32} />
+            </a>
+            <a href="https://github.com/23f1000356" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
+          <Github size={32} />
+            </a>
+          </div>
+        </div>
+        <img 
+          src="/Vishu.jpeg" 
+          alt="Vishakha Roy" 
+          className="max-w-sm rounded-3xl shadow-2xl"
+        />
           </div>
 
           {/* Mobile Layout */}
           <div className="lg:hidden text-white text-center">
-            {/* Name first on mobile */}
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Vishakha Roy</h1>
-            
-            {/* Image second on mobile */}
-            <div className="mb-6 flex justify-center">
-              <img 
-                src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                alt="Vishakha Roy" 
-                className="w-64 h-64 md:w-80 md:h-80 rounded-3xl shadow-2xl object-cover"
-              />
-            </div>
-            
-            {/* Tagline and Introduction third on mobile */}
-            <p className="text-lg md:text-xl mb-4 opacity-90">Full Stack Developer | ML Enthusiast | Data Science Practitioner</p>
-            <p className="text-base md:text-lg mb-8 opacity-90 leading-relaxed px-4">
-              Dedicated and enthusiastic Web Developer skilled in HTML, CSS, JavaScript, and React, seeking to contribute to innovative and user-friendly web projects. Driven to apply front-end development skills in a collaborative environment while continuously learning and evolving with modern web technologies. 
-              Aspiring Data Scientist with a strong foundation in Python, machine learning, and SQL, eager to apply data-driven techniques to solve real-world problems.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
-              >
-                <Code size={20} /> View My Work
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-white text-white rounded-full font-bold hover:scale-105 transform transition-all"
-              >
-                <Mail size={20} /> Get In Touch
-              </button>
-            </div>
-            
-            <div className="flex justify-center gap-6">
-              <a href="https://www.linkedin.com/in/vishakha-roy-52924b1b6/" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
-                <Linkedin size={32} />
-              </a>
-              <a href="https://github.com/23f1000356" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
-                <Github size={32} />
-              </a>
-            </div>
+        {/* Name first on mobile */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">Vishakha Roy</h1>
+        
+        {/* Image second on mobile */}
+        <div className="mb-6 flex justify-center">
+          <img src="/Vishu.jpeg" alt="Vishakha Roy"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-3xl shadow-2xl object-cover"
+          />
+        </div>
+        
+        {/* Tagline and Introduction third on mobile */}
+        <p className="text-lg md:text-xl mb-4 opacity-90">Full Stack Developer | ML Enthusiast | Data Science Practitioner</p>
+        <p className="text-base md:text-lg mb-8 opacity-90 leading-relaxed px-4">
+          Dedicated and enthusiastic Web Developer skilled in HTML, CSS, JavaScript, and React, seeking to contribute to innovative and user-friendly web projects. Driven to apply front-end development skills in a collaborative environment while continuously learning and evolving with modern web technologies. 
+          Aspiring Data Scientist with a strong foundation in Python, machine learning, and SQL, eager to apply data-driven techniques to solve real-world problems.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full font-bold hover:scale-105 transform transition-all"
+          >
+            <Code size={20} /> View My Work
+          </button>
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="flex items-center justify-center gap-2 px-8 py-3 border-2 border-white text-white rounded-full font-bold hover:scale-105 transform transition-all"
+          >
+            <Mail size={20} /> Get In Touch
+          </button>
+        </div>
+        
+        <div className="flex justify-center gap-6">
+          <a href="https://www.linkedin.com/in/vishakha-roy-52924b1b6/" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
+            <Linkedin size={32} />
+          </a>
+          <a href="https://github.com/23f1000356" target="_blank" rel="noopener noreferrer" className="text-white text-3xl hover:text-yellow-400 transition-colors">
+            <Github size={32} />
+          </a>
+        </div>
           </div>
         </div>
       </section>
+     
 
       {/* Skills Section */}
       <section id="skills" className="py-24 bg-white">
