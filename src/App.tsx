@@ -57,82 +57,98 @@ const App: React.FC = () => {
   };
 
   const projects = [
-    {
-      id: 'smart-parking',
-      title: 'Smart Parking Management System',
-      description: 'Full-stack Vehicle Parking Management System with real-time booking, admin analytics, and dynamic pricing features.',
-      tech: ['Flask', 'SQLite', 'HTML', 'Bootstrap'],
-      icon: '🅿️',
-      link: '#',
-      onClick: () => setSelectedProject('smart-parking')
-    },
-    {
-      id: 'phishing-detection',
-      title: 'AI-Powered Phishing Detection',
-      description: 'Advanced email security system using Random Forest and Gemini AI for real-time phishing detection and threat analysis.',
-      tech: ['React', 'Flask', 'Random Forest', 'OAuth2'],
-      icon: <Shield className="w-16 h-16" />,
-      link: '#',
-      onClick: () => setSelectedProject('phishing-detection')
-    },
-    {
-      id: 'smart-city',
-      title: 'Smart City Dashboard',
-      description: 'Real-time urban monitoring system with interactive maps, role-based access, and comprehensive alert systems.',
-      tech: ['React', 'TypeScript', 'Node.js', 'Maps API'],
-      icon: <Building2 className="w-16 h-16" />,
-      link: '#',
-      onClick: () => setSelectedProject('smart-city')
-    },
-    {
-      id: 'disease-prediction',
-      title: 'Disease Prediction System',
-      description: 'ML-powered health assessment tool for diabetes, heart disease, and Parkinson\'s prediction with intuitive Streamlit interface.',
-      tech: ['Streamlit', 'Machine Learning', 'Python', 'Healthcare'],
-      icon: <Heart className="w-16 h-16" />,
-      link: '#'
-    },
-    {
-      id: 'malware-prediction',
-      title: 'Malware Prediction App',
-      description: 'React-based application predicting malware risks using telemetry data, featuring SHAP analysis and interactive dashboards.',
-      tech: ['React', 'ML Models', 'SHAP', 'Data Analysis'],
-      icon: <Bug className="w-16 h-16" />,
-      link: '#'
-    },
-    {
-      id: 'financial-analytics',
-      title: 'Financial Analytics Dashboard',
-      description: 'Comprehensive financial tracking and analysis tool with advanced visualization and predictive modeling capabilities.',
-      tech: ['React', 'D3.js', 'Python', 'APIs'],
-      icon: <TrendingUp className="w-16 h-16" />,
-      link: '#'
-    },
-    {
-      id: 'neural-network',
-      title: 'Neural Network Visualizer',
-      description: 'Interactive tool for visualizing and understanding neural network architectures and training processes in real-time.',
-      tech: ['JavaScript', 'TensorFlow.js', 'Canvas API', 'Education'],
-      icon: <Brain className="w-16 h-16" />,
-      link: '#'
-    },
-    {
-      id: 'ai-chatbot',
-      title: 'AI Chatbot Assistant',
-      description: 'Intelligent conversational AI with natural language processing capabilities and context-aware responses.',
-      tech: ['Python', 'NLP', 'Flask', 'AI/ML'],
-      icon: <Bot className="w-16 h-16" />,
-      link: '#'
-    },
-    {
-      id: 'computer-vision',
-      title: 'Computer Vision Platform',
-      description: 'Multi-purpose computer vision application for object detection, facial recognition, and image analysis tasks.',
-      tech: ['OpenCV', 'Python', 'Deep Learning', 'Computer Vision'],
-      icon: <Camera className="w-16 h-16" />,
-      link: '#'
-    }
-  ];
+  {
+    id: 'smart-parking',
+    title: 'Smart Parking Management System',
+    description:
+      'Full-stack Vehicle Parking Management System with real-time booking, admin analytics, and dynamic pricing features.',
+    tech: ['Flask', 'SQLite', 'HTML', 'Bootstrap'],
+    icon: '🅿️',
+    link: '#',
+    onClick: () => setSelectedProject('smart-parking'),
+  },
+  {
+    id: 'phishing-detection',
+    title: 'AI-Powered Phishing Detection',
+    description:
+      'Advanced email security system using Random Forest and Gemini AI for real-time phishing detection and threat analysis.',
+    tech: ['React', 'Flask', 'Random Forest', 'OAuth2'],
+    icon: <Shield className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('phishing-detection'),
+  },
+  {
+    id: 'smart-city',
+    title: 'Smart City Dashboard',
+    description:
+      'Real-time urban monitoring system with interactive maps, role-based access, and comprehensive alert systems.',
+    tech: ['React', 'TypeScript', 'Node.js', 'Maps API'],
+    icon: <Building2 className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('smart-city'),
+  },
+  {
+    id: 'disease-prediction',
+    title: 'Disease Prediction System',
+    description:
+      "ML-powered health assessment tool for diabetes, heart disease, and Parkinson's prediction with intuitive Streamlit interface.",
+    tech: ['Streamlit', 'Machine Learning', 'Python', 'Healthcare'],
+    icon: <Heart className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('disease-prediction'), // ✅ Added
+  },
+  {
+    id: 'malware-prediction',
+    title: 'Malware Prediction App',
+    description:
+      'React-based application predicting malware risks using telemetry data, featuring SHAP analysis and interactive dashboards.',
+    tech: ['React', 'ML Models', 'SHAP', 'Data Analysis'],
+    icon: <Bug className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('malware-prediction'), // ✅ Added
+  },
+  {
+    id: 'financial-analytics',
+    title: 'Financial Analytics Dashboard',
+    description:
+      'Comprehensive financial tracking and analysis tool with advanced visualization and predictive modeling capabilities.',
+    tech: ['React', 'D3.js', 'Python', 'APIs'],
+    icon: <TrendingUp className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('financial-analytics'),
+  },
+  {
+    id: 'neural-network',
+    title: 'Neural Network Visualizer',
+    description:
+      'Interactive tool for visualizing and understanding neural network architectures and training processes in real-time.',
+    tech: ['JavaScript', 'TensorFlow.js', 'Canvas API', 'Education'],
+    icon: <Brain className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('neural-network'),
+  },
+  {
+    id: 'ai-chatbot',
+    title: 'AI Chatbot Assistant',
+    description:
+      'Intelligent conversational AI with natural language processing capabilities and context-aware responses.',
+    tech: ['Python', 'NLP', 'Flask', 'AI/ML'],
+    icon: <Bot className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('ai-chatbot'),
+  },
+  {
+    id: 'computer-vision',
+    title: 'Computer Vision Platform',
+    description:
+      'Multi-purpose computer vision application for object detection, facial recognition, and image analysis tasks.',
+    tech: ['OpenCV', 'Python', 'Deep Learning', 'Computer Vision'],
+    icon: <Camera className="w-16 h-16" />,
+    link: '#',
+    onClick: () => setSelectedProject('computer-vision'),
+  },
+];
+
 
   const hackathons = [
     {
@@ -206,6 +222,36 @@ const App: React.FC = () => {
       link: 'https://www.linkedin.com/in/vishakha-roy-52924b1b6/details/certifications/1723969336560/single-media-viewer/?type=DOCUMENT&profileId=ACoAADI5yTEBKT42uhFuPhtuOA8VzrHTgmJePh8'
     }
   ];
+  useEffect(() => {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll(".navbar button");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) => {
+            if (link.textContent?.toLowerCase() === entry.target.id) {
+              // If section has a dark background, make text white
+              if (entry.target.id === "home" || entry.target.id === "projects") {
+                link.classList.add("text-white");
+                link.classList.remove("text-gray-800");
+              } else {
+                // On light background sections
+                link.classList.add("text-gray-800");
+                link.classList.remove("text-white");
+              }
+            }
+          });
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+  return () => sections.forEach((section) => observer.unobserve(section));
+}, []);
 
   useEffect(() => {
     const handleScroll = () => {

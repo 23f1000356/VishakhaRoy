@@ -20,7 +20,8 @@ interface ProjectData {
 const projectsData: Record<string, ProjectData> = {
   'smart-parking': {
     title: 'Smart Parking Management System',
-    overview: 'This was my App Dev 1 project in MAD 1. The aim is to create a Vehicle Parking Management System for booking parking spots with real-time availability and management features.',
+    overview:
+      'This was my App Dev 1 project in MAD 1. The aim is to create a Vehicle Parking Management System for booking parking spots with real-time availability and management features.',
     features: [
       'User Management: Multiple users and admin roles with authentication.',
       'Parking Management: Create lots, manage spots, dynamic pricing, real-time tracking.',
@@ -29,7 +30,14 @@ const projectsData: Record<string, ProjectData> = {
       'Analytics: Real-time availability, revenue, peak hours, vehicle distribution.',
       'Extras: Auto spot assignment, reservation tracking, booking history, support.'
     ],
-    tech: ['Flask web framework', 'SQLite database', 'SQLAlchemy ORM', 'Secure password hashing with bcrypt', 'Interactive charts and analytics', 'Responsive web design'],
+    tech: [
+      'Flask web framework',
+      'SQLite database',
+      'SQLAlchemy ORM',
+      'Secure password hashing with bcrypt',
+      'Interactive charts and analytics',
+      'Responsive web design'
+    ],
     githubUrl: 'https://github.com/23f1000356/Smart-Parking-Management-System',
     images: [
       'https://images.pexels.com/photos/753876/pexels-photo-753876.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -40,7 +48,8 @@ const projectsData: Record<string, ProjectData> = {
   },
   'phishing-detection': {
     title: 'PhishDeezNuts - AI-Powered Phishing Email Detection',
-    overview: 'PhishDeezNuts is an email security app using machine learning, rule-based analysis, and Google\'s Gemini AI to detect phishing in Gmail.',
+    overview:
+      "PhishDeezNuts is an email security app using machine learning, rule-based analysis, and Google's Gemini AI to detect phishing in Gmail.",
     features: [
       'Multi-layered Detection: Random Forest, rule-based, Gemini AI analysis.',
       'Gmail Integration: OAuth2, real-time scanning, inbox monitoring.',
@@ -48,7 +57,13 @@ const projectsData: Record<string, ProjectData> = {
       'Detailed Reporting: Phishing scores, threat analysis, false positive management, history.'
     ],
     tech: ['Python 3.8+', 'Node.js 14.x+', 'Google Cloud Platform', 'Gemini API', 'React and Flask'],
-    prerequisites: ['Python 3.8 or higher', 'Node.js 14.x or higher', 'Gmail account', 'Google Cloud Platform account', 'Gemini API key'],
+    prerequisites: [
+      'Python 3.8 or higher',
+      'Node.js 14.x or higher',
+      'Gmail account',
+      'Google Cloud Platform account',
+      'Gemini API key'
+    ],
     githubUrl: 'https://github.com/23f1000356/PhishDeezNuts',
     demoUrl: 'https://youtu.be/C7EZDW05sXw',
     images: [
@@ -60,7 +75,8 @@ const projectsData: Record<string, ProjectData> = {
   },
   'smart-city': {
     title: 'Smart City Dashboard - India 🌆',
-    overview: 'A web app for real-time monitoring of urban parameters across Indian cities, including air quality, traffic, water levels, and energy usage.',
+    overview:
+      'A web app for real-time monitoring of urban parameters across Indian cities, including air quality, traffic, water levels, and energy usage.',
     features: [
       'Real-time Monitoring',
       'User Authentication',
@@ -77,6 +93,45 @@ const projectsData: Record<string, ProjectData> = {
       'https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800',
       'https://images.pexels.com/photos/2422915/pexels-photo-2422915.jpeg?auto=compress&cs=tinysrgb&w=800'
     ]
+  },
+  'disease-prediction': {
+    title: 'Disease Outbreak Prediction System',
+    overview:
+      'A Streamlit-based machine learning app that predicts risks of Diabetes, Heart Disease, and Parkinson\'s Disease based on user inputs.',
+    features: [
+      'Multi-Disease Prediction: Supports Diabetes, Heart Disease, Parkinson’s.',
+      'Interactive Interface: Simple and user-friendly Streamlit UI.',
+      'Real-time Results: Instant predictions on inputs.',
+      'Input Validation: Handles missing or invalid inputs.',
+      'Responsive Design: Works seamlessly on all devices.'
+    ],
+    tech: ['Python', 'Streamlit', 'Scikit-learn', 'Pandas & NumPy', 'Responsive UI design'],
+    githubUrl: 'https://github.com/23f1000356/Prediction-of-Disease-outbreaks',
+    images: [
+      'https://images.pexels.com/photos/6941883/pexels-photo-6941883.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/4021779/pexels-photo-4021779.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/6129502/pexels-photo-6129502.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ]
+  },
+  'malware-prediction': {
+    title: 'Microsoft Malware Prediction Application',
+    overview:
+      'A web application predicting malware infection probability using antivirus telemetry data and machine learning.',
+    features: [
+      'Dashboard: Malware stats, risk maps, and trends.',
+      'Upload Page: CSV drag-and-drop with preview and validation.',
+      'Predictions Page: Table view with filtering, color-coded risks, and export.',
+      'Feature Summary: Device info, security analysis, SHAP explanations.',
+      'Settings Page: Model metrics, threshold adjustment, feature importance.'
+    ],
+    tech: ['React + TypeScript', 'Tailwind CSS', 'Recharts', 'AG Grid', 'PapaParse', 'Machine Learning backend'],
+    prerequisites: ['Node.js 16.x+', 'npm 8.x+'],
+    githubUrl: 'https://github.com/23f1000356/Malware-prediction-ml-project',
+    images: [
+      'https://images.pexels.com/photos/5380665/pexels-photo-5380665.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/5380649/pexels-photo-5380649.jpeg?auto=compress&cs=tinysrgb&w=800',
+      'https://images.pexels.com/photos/4974914/pexels-photo-4974914.jpeg?auto=compress&cs=tinysrgb&w=800'
+    ]
   }
 };
 
@@ -85,12 +140,13 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) =
   const project = projectsData[projectId];
 
   useEffect(() => {
+    if (!project) return;
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [project.images.length]);
+  }, [project?.images.length]);
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length);
@@ -118,7 +174,10 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) =
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-lg shadow-sm z-10">
         <div className="max-w-6xl mx-auto flex justify-between items-center px-4 py-4">
-          <button onClick={onClose} className="text-2xl font-bold text-blue-600 hover:text-purple-600 transition-colors">
+          <button
+            onClick={onClose}
+            className="text-2xl font-bold text-blue-600 hover:text-purple-600 transition-colors"
+          >
             VR
           </button>
           <button
@@ -142,7 +201,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) =
                   alt={`${project.title} - Image ${currentImageIndex + 1}`}
                   className="w-full h-96 object-cover"
                 />
-                
+
                 {/* Navigation Arrows */}
                 <button
                   onClick={prevImage}
@@ -183,7 +242,15 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) =
                 <p className="text-gray-600 leading-relaxed">{project.overview}</p>
                 {project.demoUrl && (
                   <p className="mt-2 text-gray-600">
-                    Video Demo: <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Working Demo</a>
+                    Video Demo:{' '}
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      Working Demo
+                    </a>
                   </p>
                 )}
               </div>
@@ -255,16 +322,32 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ projectId, onClose }) =
       <footer className="bg-gray-800 text-white text-center py-8 mt-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-center gap-6 mb-6">
-            <a href="https://www.linkedin.com/in/vishakha-roy-52924b1b6/" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-blue-400 transition-colors">
+            <a
+              href="https://www.linkedin.com/in/vishakha-roy-52924b1b6/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-2xl hover:text-blue-400 transition-colors"
+            >
               <i className="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/23f1000356" target="_blank" rel="noopener noreferrer" className="text-white text-2xl hover:text-blue-400 transition-colors">
+            <a
+              href="https://github.com/23f1000356"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-2xl hover:text-blue-400 transition-colors"
+            >
               <i className="fab fa-github"></i>
             </a>
-            <a href="mailto:122vishakha2092@sjcem.edu.in" className="text-white text-2xl hover:text-blue-400 transition-colors">
+            <a
+              href="mailto:122vishakha2092@sjcem.edu.in"
+              className="text-white text-2xl hover:text-blue-400 transition-colors"
+            >
               <i className="fas fa-envelope"></i>
             </a>
-            <a href="tel:+919354565648" className="text-white text-2xl hover:text-blue-400 transition-colors">
+            <a
+              href="tel:+919354565648"
+              className="text-white text-2xl hover:text-blue-400 transition-colors"
+            >
               <i className="fas fa-phone"></i>
             </a>
           </div>
